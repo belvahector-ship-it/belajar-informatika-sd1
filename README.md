@@ -59,9 +59,12 @@ Materi disusun berdasarkan Capaian Pembelajaran Informatika / Literasi Digital K
 
 ---
 
-## 🌐 Cara Mempublikasikan ke GitHub Pages (Gratis & Cepat)
+## 🌐 Tautan Publik (Live Demo)
 
-Proyek ini dibuat menggunakan **vanilla HTML, CSS, dan JavaScript tanpa dependensi / tanpa perlu build (npm/node)**. Anda dapat langsung mengonlinekannya ke GitHub Pages dalam 2 menit:
+Website sudah dipublikasikan secara resmi di **GitHub Pages** dan dapat diakses langsung oleh siswa, guru, dan orang tua melalui:
+👉 **[https://belvahector-ship-it.github.io/belajar-informatika-sd1/](https://belvahector-ship-it.github.io/belajar-informatika-sd1/)**
+
+🔗 Repositori GitHub: [https://github.com/belvahector-ship-it/belajar-informatika-sd1](https://github.com/belvahector-ship-it/belajar-informatika-sd1)
 
 ### Langkah 1: Buat Repositori di GitHub
 1. Buka [github.com/new](https://github.com/new).
