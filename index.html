@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Web Pembelajaran & Latihan Interaktif Informatika Kelas 1 SD Al Huda Semarang. Dilengkapi audio bacakan soal, efek suara seru, sistem bintang nilai, dan sertifikat prestasi!">
+  <title>Belajar Informatika Kelas 1 SD — Seru & Interaktif 🌟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-soft: #eff6ff;
+      --secondary: #0d9488;
+      --secondary-soft: #f0fdfa;
+      --yellow: #f59e0b;
+      --yellow-soft: #fef3c7;
+      --pink: #ec4899;
+      --pink-soft: #fdf2f8;
+      --green: #10b981;
+      --green-soft: #ecfdf5;
+      --red: #ef4444;
+      --red-soft: #fef2f2;
+      --purple: #8b5cf6;
+      --purple-soft: #f5f3ff;
+      
+      --navy: #0f172a;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #cbd5e1;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      
+      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 25px -3px rgba(37,99,235,0.1), 0 4px 6px -4px rgba(0,0,0,0.05);
+      --shadow-lg: 0 20px 30px -5px rgba(15,23,42,0.12), 0 8px 10px -6px rgba(0,0,0,0.05);
+      --radius-sm: 14px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    
+    body {
+      font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 10% 15%, #dbeafe 0%, transparent 40%),
+                  radial-gradient(circle at 90% 10%, #fef3c7 0%, transparent 35%),
+                  radial-gradient(circle at 50% 90%, #dcfce7 0%, transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand-title, .fun-font {
+      font-family: 'Fredoka', 'Nunito', cursive, sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    button, input, textarea { font-family: inherit; }
+    button { cursor: pointer; border: none; outline: none; }
+    .hidden { display: none !important; }
+
+    .wrap {
+      width: min(100% - 32px, 940px);
+      margin: 0 auto;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      box-shadow: 0 8px 18px rgba(37,99,235,0.25);
+      animation: floatBadge 3s ease-in-out infinite;
+    }
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    .brand-text h1 {
+      font-size: clamp(16px, 3.2vw, 22px);
+      color: #1e3a8a;
+      line-height: 1.1;
+    }
+    .brand-text p {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon-btn {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 8px 14px;
+      font-weight: 800;
+      font-size: 14px;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+    .icon-btn:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .icon-btn.active {
+      background: #e0f2fe;
+      border-color: #38bdf8;
+      color: #0369a1;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #2563eb, #3b82f6 50%, #06b6d4);
+      border-radius: var(--radius-lg);
+      padding: clamp(24px, 5vw, 40px);
+      color: white;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .hero-banner::after {
+      content: '🌟';
+      position: absolute;
+      right: 20px;
+      top: -15px;
+      font-size: 120px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.22);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+    .hero-banner h2 {
+      font-size: clamp(24px, 5vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .hero-banner p {
+      font-size: clamp(14px, 2.5vw, 17px);
+      color: #e0f2fe;
+      max-width: 620px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .chip {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Card Panels */
+    .panel {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 2px solid #e2e8f0;
+      box-shadow: var(--shadow-md);
+      padding: clamp(20px, 4vw, 36px);
+      position: relative;
+    }
+
+    /* Start Screen */
+    .start-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .start-grid { grid-template-columns: 1fr; }
+    }
+
+    .mascot-greeting {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(135deg, #f0fdf4, #e0f2fe);
+      border: 2px solid #bbf7d0;
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-bottom: 22px;
+    }
+    .mascot-avatar {
+      font-size: 52px;
+      line-height: 1;
+      animation: bounceMascot 2s infinite ease-in-out;
+    }
+    @keyframes bounceMascot {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(4deg); }
+    }
+    .mascot-speech h3 {
+      font-size: 20px;
+      color: #166534;
+      margin-bottom: 4px;
+    }
+    .mascot-speech p {
+      font-size: 14px;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    /* Input & Avatar Selection */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .label-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .name-input {
+      width: 100%;
+      padding: 16px 18px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1e3a8a;
+      background: #f8fafc;
+      border: 2.5px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      transition: all 0.2s;
+    }
+    .name-input:focus {
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+      outline: none;
+    }
+
+    /* Avatar Picker */
+    .avatar-list {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .avatar-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: #f1f5f9;
+      border: 2.5px solid #e2e8f0;
+      font-size: 24px;
+      display: grid;
+      place-items: center;
+      transition: all 0.2s;
+    }
+    .avatar-btn:hover {
+      transform: scale(1.1);
+      border-color: #94a3b8;
+    }
+    .avatar-btn.selected {
+      background: #dbeafe;
+      border-color: var(--primary);
+      transform: scale(1.15);
+      box-shadow: 0 6px 14px rgba(37,99,235,0.25);
+    }
+
+    /* Mode Selection Cards */
+    .modes-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .mode-card {
+      border: 2.5px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      background: white;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.2s;
+    }
+    .mode-card:hover {
+      border-color: var(--primary);
+      background: #f8fafc;
+      transform: translateY(-2px);
+    }
+    .mode-card.selected {
+      border-color: var(--primary);
+      background: #eff6ff;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.15);
+    }
+    .mode-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #dbeafe;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .mode-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .mode-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Action Buttons */
+    .btn {
+      padding: 15px 24px;
+      border-radius: var(--radius-md);
+      font-size: 17px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.03);
+    }
+    .btn:active {
+      transform: translateY(1px);
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      box-shadow: 0 6px 16px rgba(37,99,235,0.3);
+    }
+    .btn-success {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      box-shadow: 0 6px 16px rgba(16,185,129,0.3);
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #334155;
+    }
+    .btn-secondary:hover {
+      background: #cbd5e1;
+    }
+    .btn-outline {
+      background: white;
+      border: 2px solid #cbd5e1;
+      color: #334155;
+    }
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 12px;
+    }
+    .btn-block {
+      width: 100%;
+    }
+
+    /* Guide Sidebar */
+    .guide-box {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+    .guide-box h4 {
+      font-size: 18px;
+      color: #1e3a8a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .guide-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #334155;
+      font-weight: 600;
+    }
+    .guide-icon {
+      font-size: 20px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Quiz Screen Styles */
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .quiz-step-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .step-badge {
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+      color: #1d4ed8;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .topic-badge {
+      background: #f0fdf4;
+      border: 1.5px solid #bbf7d0;
+      color: #15803d;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* Progress bar */
+    .progress-wrapper {
+      margin-bottom: 20px;
+    }
+    .progress-bar-bg {
+      height: 16px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+      padding: 3px;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981, #06b6d4, #3b82f6);
+      border-radius: 999px;
+      transition: width 0.35s ease;
+      box-shadow: 0 0 8px rgba(16,185,129,0.5);
+    }
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    /* Number Quick Navigator */
+    .num-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px dashed #e2e8f0;
+    }
+    .num-pill {
+      min-width: 38px;
+      height: 38px;
+      padding: 0 6px;
+      border-radius: 12px;
+      background: white;
+      border: 2px solid #cbd5e1;
+      font-size: 14px;
+      font-weight: 800;
+      color: #475569;
+      display: grid;
+      place-items: center;
+      transition: all 0.15s;
+    }
+    .num-pill:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .num-pill.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 10px rgba(37,99,235,0.3);
+      transform: scale(1.08);
+    }
+    .num-pill.answered {
+      background: #dcfce7;
+      border-color: #86efac;
+      color: #166534;
+    }
+    .num-pill.is-fill {
+      border-style: dashed;
+    }
+
+    /* Question Box */
+    .question-box {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: clamp(20px, 4vw, 32px);
+      margin-bottom: 24px;
+    }
+    .q-visual {
+      font-size: 58px;
+      line-height: 1;
+      width: 86px;
+      height: 86px;
+      border-radius: 24px;
+      background: white;
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 16px;
+      border: 2px solid #e2e8f0;
+      animation: gentlePulse 3s infinite ease-in-out;
+    }
+    @keyframes gentlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .q-text {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.35;
+      margin-bottom: 22px;
+    }
+
+    /* Options Grid (A, B, C) */
+    .options-grid {
+      display: grid;
+      gap: 14px;
+    }
+    .option-btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: white;
+      border: 2.5px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      text-align: left;
+      font-size: clamp(16px, 2.8vw, 20px);
+      font-weight: 700;
+      color: var(--navy);
+      transition: all 0.18s;
+      min-height: 72px;
+      width: 100%;
+    }
+    .option-btn:hover {
+      border-color: #3b82f6;
+      background: #f8fafc;
+      transform: translateX(4px);
+    }
+    .option-btn.selected {
+      background: #eff6ff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+      transform: scale(1.01);
+    }
+    .option-letter {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #f1f5f9;
+      border: 2px solid #cbd5e1;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: #3b82f6;
+      flex-shrink: 0;
+      transition: all 0.18s;
+    }
+    .option-btn.selected .option-letter {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    /* Fill-in Question Input */
+    .fill-box {
+      margin-top: 10px;
+    }
+    .fill-input {
+      width: 100%;
+      padding: 16px 18px;
+      font-size: 19px;
+      font-weight: 700;
+      border: 2.5px solid #93c5fd;
+      border-radius: var(--radius-md);
+      background: white;
+      color: #1e3a8a;
+      min-height: 100px;
+      resize: vertical;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+    }
+    .fill-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+    }
+    .fill-tip {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0369a1;
+      background: #e0f2fe;
+      padding: 10px 14px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Quiz Navigation Controls */
+    .quiz-bottom-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .quiz-nav-right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* Result Screen Styles */
+    .result-card {
+      text-align: center;
+      padding: 24px 16px;
+      background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+      border: 2.5px solid #bfdbfe;
+      border-radius: var(--radius-lg);
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .stars-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+    .star-anim {
+      display: inline-block;
+      animation: popStar 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    @keyframes popStar {
+      0% { transform: scale(0) rotate(-45deg); opacity: 0; }
+      70% { transform: scale(1.3) rotate(15deg); }
+      100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    }
+    .result-score-title {
+      font-size: clamp(24px, 4.5vw, 36px);
+      color: #1e3a8a;
+      margin-bottom: 6px;
+    }
+    .score-circle {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: white;
+      border: 4px solid #3b82f6;
+      box-shadow: 0 8px 24px rgba(37,99,235,0.18);
+      margin: 14px auto;
+    }
+    .score-num {
+      font-size: 44px;
+      font-weight: 900;
+      color: #1d4ed8;
+      line-height: 1;
+    }
+    .score-sub {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text-muted);
+    }
+    .result-feedback {
+      font-size: 18px;
+      font-weight: 700;
+      color: #334155;
+      max-width: 580px;
+      margin: 8px auto 16px;
+    }
+
+    /* Badges earned */
+    .badges-earned {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .badge-item {
+      background: white;
+      border: 1.5px solid #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #1e3a8a;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Certificate / Piagam */
+    .cert-section {
+      margin: 32px 0;
+    }
+    .cert-frame {
+      border: 8px double #3b82f6;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: clamp(24px, 5vw, 42px);
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow-md);
+      background-image: radial-gradient(#e0f2fe 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .cert-header {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #3b82f6;
+      font-weight: 900;
+    }
+    .cert-title {
+      font-size: clamp(26px, 4.5vw, 38px);
+      color: #1e3a8a;
+      margin: 8px 0;
+    }
+    .cert-sub {
+      font-size: 15px;
+      color: #64748b;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .cert-student-name {
+      font-size: clamp(24px, 4vw, 36px);
+      color: #047857;
+      font-weight: 900;
+      border-bottom: 3px solid #10b981;
+      display: inline-block;
+      padding: 0 24px 6px;
+      margin: 10px 0 16px;
+    }
+    .cert-desc {
+      font-size: 15px;
+      color: #334155;
+      font-weight: 600;
+      max-width: 600px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .cert-footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 2px dashed #cbd5e1;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .cert-seal {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f59e0b, #fbbf24);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 34px;
+      box-shadow: 0 4px 12px rgba(245,158,11,0.4);
+    }
+    .cert-sign h5 {
+      font-size: 14px;
+      color: var(--navy);
+      margin-top: 30px;
+      border-top: 1.5px solid #94a3b8;
+      padding-top: 4px;
+    }
+
+    /* Review Cards */
+    .review-accordion {
+      margin: 28px 0;
+    }
+    .review-item {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+    .review-item.correct {
+      border-color: #86efac;
+      background: #f0fdf4;
+    }
+    .review-item.wrong {
+      border-color: #fca5a5;
+      background: #fef2f2;
+    }
+    .review-q {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .review-answer-row {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 4px 0;
+    }
+    .review-why {
+      background: white;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #0369a1;
+      margin-top: 8px;
+      border: 1px solid #bfdbfe;
+    }
+    .self-mark-btns {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    /* Canvas Confetti */
+    #confettiCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* Toast notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.95);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 800;
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 30px 0 50px;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .site-footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Print styling */
+    @media print {
+      body { background: white !important; }
+      .top-nav, .hero-banner, .site-footer, .no-print, #startScreen, #quizScreen, .quiz-bottom-nav, .review-accordion {
+        display: none !important;
+      }
+      #resultScreen { display: block !important; }
+      .panel { border: none !important; box-shadow: none !important; padding: 0 !important; }
+      .cert-frame { border: 6px double #000 !important; box-shadow: none !important; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="wrap top-nav">
+    <div class="brand-box">
+      <div class="brand-icon" aria-hidden="true">💻</div>
+      <div class="brand-text">
+        <h1 class="brand-title">SD AL HUDA SEMARANG</h1>
+        <p>Informatika Kelas 1 • Belajar Menyenangkan</p>
+      </div>
+    </div>
+    <div class="nav-controls">
+      <button id="soundToggleBtn" class="icon-btn active" type="button" title="Aktifkan/Matikan Suara">
+        <span id="soundIcon">🔊</span> <span id="soundLabel">Suara ON</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-badge">🌟 Latihan Interaktif Anak Hebat</div>
+      <h2>Ayo Belajar Informatika!<br>Kelas 1 SD Ceria</h2>
+      <p>Mengenal komputer, peralatan teknologi di sekitar kita, cara duduk yang sehat, dan bermain tebak gambar seru!</p>
+      <div class="hero-chips">
+        <span class="chip">📝 30 Soal ASAS 1</span>
+        <span class="chip">🔊 Suara Bacakan Soal</span>
+        <span class="chip">⭐ Sistem 3 Bintang</span>
+        <span class="chip">🏆 Sertifikat Prestasi</span>
+        <span class="chip">📶 Bisa Tanpa Kuota</span>
+      </div>
+    </section>
+
+    <!-- SCREEN 1: START SCREEN -->
+    <section id="startScreen" class="panel">
+      <div class="start-grid">
+        <div>
+          <!-- Mascot Greeting -->
+          <div class="mascot-greeting">
+            <div class="mascot-avatar" id="mascotIcon">🤖</div>
+            <div class="mascot-speech">
+              <h3>Halo, Sahabat Cilik! 👋</h3>
+              <p>Aku <strong>Kiko si Robot Pintar</strong>. Yuk kita belajar bersama sambil mengumpulkan bintang juara!</p>
+            </div>
+          </div>
+
+          <!-- Form Name -->
+          <div class="form-group">
+            <label class="label-title" for="studentNameInput">
+              <span>👤 Siapa Namamu?</span>
+            </label>
+            <input type="text" id="studentNameInput" class="name-input" maxlength="60" placeholder="Ketik nama lengkapmu di sini...">
+          </div>
+
+          <!-- Avatar Picker -->
+          <div class="form-group">
+            <label class="label-title">
+              <span>🎨 Pilih Avatarmu:</span>
+            </label>
+            <div class="avatar-list" id="avatarPicker">
+              <button type="button" class="avatar-btn selected" data-avatar="🤖">🤖</button>
+              <button type="button" class="avatar-btn" data-avatar="🐱">🐱</button>
+              <button type="button" class="avatar-btn" data-avatar="🐶">🐶</button>
+              <button type="button" class="avatar-btn" data-avatar="🐰">🐰</button>
+              <button type="button" class="avatar-btn" data-avatar="🦁">🦁</button>
+              <button type="button" class="avatar-btn" data-avatar="🚀">🚀</button>
+              <button type="button" class="avatar-btn" data-avatar="🦄">🦄</button>
+              <button type="button" class="avatar-btn" data-avatar="🦖">🦖</button>
+            </div>
+          </div>
+
+          <!-- Mode Selector -->
+          <div class="form-group">
+            <label class="label-title">
+              <span>🎯 Pilih Mode Latihan:</span>
+            </label>
+            <div class="modes-list" id="modeList">
+              <button type="button" class="mode-card selected" data-mode="asas">
+                <div class="mode-icon">📋</div>
+                <div>
+                  <div class="mode-title">Latihan ASAS 1 Lengkap (30 Soal)</div>
+                  <div class="mode-desc">25 Pilihan Ganda + 5 Isian Singkat sesuai kisi-kisi resmi.</div>
+                </div>
+              </button>
+              <button type="button" class="mode-card" data-mode="quick">
+                <div class="mode-icon">⚡</div>
+                <div>
+                  <div class="mode-title">Kuis Kilat Bintang (10 Soal Acak)</div>
+                  <div class="mode-desc">Bermain cepat 5 menit untuk menguji ketelitianmu!</div>
+                </div>
+              </button>
+              <button type="button" class="mode-card" data-mode="komputer">
+                <div class="mode-icon">🖥️</div>
+                <div>
+                  <div class="mode-title">Fokus: Bagian-Bagian Komputer</div>
+                  <div class="mode-desc">Mengenal Monitor, Mouse, Keyboard, CPU, dan Speaker.</div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Start Buttons -->
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
+            <button id="startExamBtn" type="button" class="btn btn-primary btn-block" style="flex:1;">
+              🚀 Mulai Latihan Sekarang!
+            </button>
+            <button id="resumeExamBtn" type="button" class="btn btn-secondary hidden" style="flex:1;">
+              ↩ Lanjutkan yang Tadi
+            </button>
+          </div>
+        </div>
+
+        <!-- Sidebar Hints -->
+        <aside class="guide-box">
+          <h4>💡 Cara Asyik Mengerjakan</h4>
+          <div class="guide-item">
+            <span class="guide-icon">1️⃣</span>
+            <span>Tekan tombol <strong>🔊 Bacakan Soal</strong> jika ingin soal dibacakan dengan suara ramah.</span>
+          </div>
+          <div class="guide-item">
+            <span class="guide-icon">2️⃣</span>
+            <span>Pilih jawaban <strong>A, B, atau C</strong> yang menurutmu paling tepat.</span>
+          </div>
+          <div class="guide-item">
+            <span class="guide-icon">3️⃣</span>
+            <span>Pada soal isian, ketik jawaban singkat atau diskusikan bersama orang tua.</span>
+          </div>
+          <div class="guide-item">
+            <span class="guide-icon">4️⃣</span>
+            <span>Dapatkan <strong>3 Bintang Emas</strong> dan <strong>Piagam Penghargaan</strong> yang bisa dicetak!</span>
+          </div>
+          
+          <div style="background:#e0f2fe; border-radius:14px; padding:14px; margin-top:20px; font-size:13px; color:#0369a1; font-weight:700;">
+            ❤️ <strong>Pesan untuk Ayah & Bunda:</strong><br>
+            Aplikasi ini dirancang khusus untuk anak kelas 1 SD agar lebih percaya diri menyambut ASAS 1 Informatika.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: QUIZ SCREEN -->
+    <section id="quizScreen" class="panel hidden">
+      <!-- Quiz Header -->
+      <div class="quiz-header">
+        <div class="quiz-step-info">
+          <span id="quizIndexBadge" class="step-badge">Soal 1 dari 30</span>
+          <span id="quizTopicBadge" class="topic-badge">Benda di Sekitar</span>
+        </div>
+        <button id="ttsSpeakBtn" class="btn btn-secondary btn-sm" type="button">
+          🔊 Bacakan Soal
+        </button>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="progress-wrapper">
+        <div class="progress-bar-bg">
+          <div id="quizProgressBar" class="progress-bar-fill" style="width: 0%;"></div>
+        </div>
+        <div class="progress-meta">
+          <span id="progressText">0 dari 30 terjawab</span>
+          <span id="progressPercentage">0%</span>
+        </div>
+      </div>
+
+      <!-- Quick Number Navigation -->
+      <nav id="questionNavGrid" class="num-nav" aria-label="Navigasi Nomor Soal"></nav>
+
+      <!-- Question Box -->
+      <article class="question-box">
+        <div id="qIllustration" class="q-visual" aria-hidden="true">🥛</div>
+        <h2 id="qText" class="q-text">Saat ingin minum air putih, benda yang paling tepat digunakan adalah ....</h2>
+        
+        <!-- Options or Fill input -->
+        <div id="optionsContainer"></div>
+      </article>
+
+      <!-- Quiz Navigation Controls -->
+      <div class="quiz-bottom-nav">
+        <button id="prevQuestionBtn" type="button" class="btn btn-secondary">
+          ← Sebelumnya
+        </button>
+        <div class="quiz-nav-right">
+          <button id="nextQuestionBtn" type="button" class="btn btn-primary">
+            Berikutnya →
+          </button>
+          <button id="finishQuizBtn" type="button" class="btn btn-success hidden">
+            ✅ Selesai & Periksa Nilai!
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: RESULT SCREEN -->
+    <section id="resultScreen" class="panel hidden">
+      <!-- Result Banner -->
+      <div class="result-card">
+        <div class="stars-row" id="starsContainer">
+          <span class="star-anim">⭐</span>
+          <span class="star-anim">⭐</span>
+          <span class="star-anim">⭐</span>
+        </div>
+        <h2 id="resultMainTitle" class="result-score-title">Luar Biasa, Siswa Hebat! 🎉</h2>
+        
+        <div class="score-circle">
+          <span id="finalScoreVal" class="score-num">100</span>
+          <span class="score-sub">NILAI AKHIR</span>
+        </div>
+
+        <p id="resultFeedbackText" class="result-feedback">
+          Selamat! Kamu berhasil menjawab soal dengan sangat teliti dan pintar.
+        </p>
+
+        <div class="badges-earned" id="badgesContainer"></div>
+      </div>
+
+      <!-- Certificate Frame -->
+      <div class="cert-section">
+        <div class="cert-frame" id="printableCertificate">
+          <div class="cert-header">SD AL HUDA SEMARANG • TAHUN AJARAN 2026/2027</div>
+          <h2 class="cert-title">PIAGAM PENGHARGAAN</h2>
+          <div class="cert-sub">Latihan Mandiri Asesmen Sumatif Akhir Semester (ASAS) 1 Informatika</div>
+          <div style="font-size:15px; font-weight:700; color:#475569;">Diberikan dengan bangga kepada:</div>
+          <div id="certStudentName" class="cert-student-name">Ananda Bintang Juara</div>
+          <p class="cert-desc" id="certDescription">
+            Atas ketekunan, semangat belajar, dan keberhasilan meraih <strong>Nilai 100 (3 Bintang Emas)</strong> dalam menyelesaikan latihan pemahaman perangkat komputer dan teknologi kelas 1 SD.
+          </p>
+          <div class="cert-footer">
+            <div style="text-align:left;">
+              <div style="font-size:12px; color:#64748b;">Tanggal Penyelesaian:</div>
+              <strong id="certDateVal">21 November 2026</strong>
+            </div>
+            <div class="cert-seal">🏆</div>
+            <div class="cert-sign">
+              <div style="font-size:12px; color:#64748b;">Penyusun Soal / Guru:</div>
+              <h5>Albadru Muh Izul Khaq, S.Kom</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fill-in Review Box -->
+      <div id="fillReviewSection" style="margin-top:24px;">
+        <h3 style="font-size:22px; color:var(--navy); margin-bottom:8px;">✏️ Periksa Jawaban Isian Bersama Orang Tua</h3>
+        <p style="font-size:14px; color:var(--text-muted); margin-bottom:16px;">
+          Bandingkan jawaban ananda dengan contoh jawaban. Klik <strong>✓ Benar</strong> jika maknanya sudah tepat!
+        </p>
+        <div id="fillReviewList"></div>
+      </div>
+
+      <!-- Multiple Choice Review Toggle -->
+      <div style="margin-top:24px;">
+        <button id="toggleMcReviewBtn" class="btn btn-outline btn-block" type="button">
+          📖 Buka Pembahasan Soal Pilihan Ganda <span id="reviewArrow">▼</span>
+        </button>
+        <div id="mcReviewList" class="review-accordion hidden"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="quiz-bottom-nav no-print" style="margin-top:32px;">
+        <button id="retryExamBtn" type="button" class="btn btn-secondary">
+          🔄 Latihan Ulang
+        </button>
+        <div style="display:flex; gap:10px;">
+          <button id="printCertBtn" type="button" class="btn btn-primary">
+            🖨️ Cetak Piagam / PDF
+          </button>
+          <button id="homeBtn" type="button" class="btn btn-success">
+            🏠 Kembali ke Awal
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="wrap site-footer">
+    <p>Disusun untuk Latihan Mandiri Informatika Kelas 1 SD Al Huda Semarang • Penyusun: <strong>Albadru Muh Izul Khaq, S.Kom</strong></p>
+    <p style="margin-top:4px;">Website edukasi anak siap publish di GitHub Pages 🚀</p>
+  </footer>
+
+  <div id="toast" class="toast-msg hidden" role="status" aria-live="polite"></div>
+
+  <!-- SCRIPT ENGINE -->
+  <script>
+  'use strict';
+
+  /* ========================================================
+     1. BANK SOAL LENGKAP & KAYA KELAS 1 SD INFORMATIKA
+     ======================================================== */
+  const ALL_QUESTIONS = [
+    // 25 PG Asli Latihan ASAS 1
+    {
+      id: 1, type: 'mc', topic: 'Benda di Sekitar', icon: '🥛',
+      q: 'Saat ingin minum air putih, benda yang paling tepat digunakan adalah ....',
+      options: ['🧦 Kaos kaki', '🥛 Gelas', '📘 Buku tulis'],
+      a: 1,
+      why: 'Gelas dibuat khusus sebagai wadah air minum.'
+    },
+    {
+      id: 2, type: 'mc', topic: 'Benda di Sekitar', icon: '🎨',
+      q: 'Untuk menggambar dengan pensil warna, kita biasanya membutuhkan ....',
+      options: ['🍳 Wajan', '🛏️ Bantal', '📄 Kertas'],
+      a: 2,
+      why: 'Kertas adalah tempat yang tepat dan bersih untuk menggambar.'
+    },
+    {
+      id: 3, type: 'mc', topic: 'Benda di Sekitar', icon: '✂️',
+      q: 'Agar dua potongan kertas dapat menempel saat membuat prakarya, kita menggunakan ....',
+      options: ['🧴 Lem', '🧽 Penghapus', '🪖 Helm'],
+      a: 0,
+      why: 'Lem memiliki zat perekat untuk menempelkan kertas.'
+    },
+    {
+      id: 4, type: 'mc', topic: 'Hidup Bersih & Sehat', icon: '🧼',
+      q: 'Kamu sudah membasahi tangan dan menggosoknya dengan sabun. Selanjutnya kamu perlu ....',
+      options: ['memegang lantai', 'langsung memakai sarung tangan', 'membilas tangan dengan air bersih'],
+      a: 2,
+      why: 'Membilas dengan air bersih menghilangkan busa sabun dan kuman.'
+    },
+    {
+      id: 5, type: 'mc', topic: 'Benda di Sekitar', icon: '🍞',
+      q: 'Manakah benda yang dapat dimakan saat sarapan pagi?',
+      options: ['🍞 Roti', '📏 Penggaris', '🎒 Tas'],
+      a: 0,
+      why: 'Roti adalah makanan bergizi, sedangkan penggaris dan tas adalah alat sekolah.'
+    },
+    {
+      id: 6, type: 'mc', topic: 'Bentuk Benda', icon: '🚲',
+      q: 'Bentuk roda sepeda paling mirip dengan bangun datar ....',
+      options: ['persegi panjang', 'lingkaran', 'segitiga'],
+      a: 1,
+      why: 'Roda berbentuk bulat melingkar agar bisa berputar dengan lancar.'
+    },
+    {
+      id: 7, type: 'mc', topic: 'Benda di Sekolah', icon: '🎒',
+      q: 'Benda yang paling tepat untuk membawa buku dan alat tulis ke sekolah adalah ....',
+      options: ['🍲 Panci', '🪣 Gayung', '🎒 Tas sekolah'],
+      a: 2,
+      why: 'Tas sekolah dirancang kuat dan nyaman untuk membawa perlengkapan belajar.'
+    },
+    {
+      id: 8, type: 'mc', topic: 'Benda di Sekolah', icon: '✏️',
+      q: 'Jika tulisan pensil di buku salah, kita dapat menghapusnya menggunakan ....',
+      options: ['🧽 Penghapus', '🥄 Sendok', '👞 Sepatu'],
+      a: 0,
+      why: 'Penghapus terbuat dari karet lembut yang bisa membersihkan coretan pensil.'
+    },
+    {
+      id: 9, type: 'mc', topic: 'Benda di Sekitar', icon: '🍌',
+      q: 'Di antara benda berikut, yang merupakan buah yang menyehatkan adalah ....',
+      options: ['🖥️ Monitor', '🍌 Pisang', '🖊️ Spidol'],
+      a: 1,
+      why: 'Pisang adalah buah ciptaan Tuhan yang manis dan menyehatkan.'
+    },
+    {
+      id: 10, type: 'mc', topic: 'Benda di Sekolah', icon: '📏',
+      q: 'Dina ingin membuat garis lurus di buku gambarnya. Alat yang bisa membantunya adalah ....',
+      options: ['🍼 Botol', '🖱️ Mouse', '📏 Penggaris'],
+      a: 2,
+      why: 'Penggaris memiliki tepi lurus untuk memandu pensil membuat garis rapi.'
+    },
+    {
+      id: 11, type: 'mc', topic: 'Komunikasi', icon: '🗣️',
+      q: 'Saat bertemu teman di halaman sekolah, kita dapat menyampaikan pesan dengan cara ....',
+      options: ['berbicara dengan sopan', 'berlari tanpa berkata-kata', 'menutup mata'],
+      a: 0,
+      why: 'Berbicara dengan sopan dan ramah adalah cara berkomunikasi langsung yang baik.'
+    },
+    {
+      id: 12, type: 'mc', topic: 'Komunikasi', icon: '📞',
+      q: 'Ayah sedang berada di luar kota. Untuk berbicara dengannya dari rumah, kamu dapat ....',
+      options: ['mengetuk meja', 'menelepon ayah', 'melambaikan tangan ke foto'],
+      a: 1,
+      why: 'Telepon menghubungkan suara kita dengan orang yang berada jauh.'
+    },
+    {
+      id: 13, type: 'mc', topic: 'Alat Komunikasi', icon: '📱',
+      q: 'Perangkat teknologi yang bisa digunakan untuk melakukan panggilan suara dan video adalah ....',
+      options: ['🧹 Sapu', '✂️ Gunting', '📱 Ponsel pintar'],
+      a: 2,
+      why: 'Ponsel pintar (smartphone) dapat digunakan untuk telepon suara maupun video call.'
+    },
+    {
+      id: 14, type: 'mc', topic: 'Alat Komunikasi Tradisional', icon: '🪵',
+      q: 'Di pos ronda kampung, warga memukul alat kayu berlubang untuk memberi tanda bahaya. Alat itu adalah ....',
+      options: ['kentongan', 'mouse komputer', 'piring makan'],
+      a: 0,
+      why: 'Kentongan adalah alat komunikasi tradisional yang berbunyi nyaring saat dipukul.'
+    },
+    {
+      id: 15, type: 'mc', topic: 'Bagian Komputer', icon: '🖥️',
+      q: 'Tulisan, angka, gambar kartun, dan video dapat kita lihat pada bagian komputer yang bernama ....',
+      options: ['speaker', 'monitor', 'keyboard'],
+      a: 1,
+      why: 'Monitor adalah layar komputer yang menampilkan gambar dan tulisan.'
+    },
+    {
+      id: 16, type: 'mc', topic: 'Bagian Komputer', icon: '🖱️',
+      q: 'Alat kecil digerakkan tangan untuk mengarahkan panah (kursor) di layar dinamakan ....',
+      options: ['monitor', 'speaker', 'mouse'],
+      a: 2,
+      why: 'Mouse (tetikus) digerakkan tangan untuk mengklik dan memilih gambar di layar.'
+    },
+    {
+      id: 17, type: 'mc', topic: 'Menggunakan Komputer', icon: '💡',
+      q: 'Salah satu tanda komputer sedang aktif atau menyala adalah ....',
+      options: ['lampu indikator menyala terang', 'keyboard menghilang', 'layar berubah jadi daun'],
+      a: 0,
+      why: 'Lampu indikator atau layar yang menyala menandakan komputer sedang aktif.'
+    },
+    {
+      id: 18, type: 'mc', topic: 'Bagian Komputer', icon: '⌨️',
+      q: 'Nina ingin mengetik namanya sendiri di komputer. Bagian yang digunakan adalah ....',
+      options: ['monitor', 'keyboard', 'speaker'],
+      a: 1,
+      why: 'Keyboard (papan ketik) berisi tombol huruf A-Z dan angka 0-9 untuk mengetik.'
+    },
+    {
+      id: 19, type: 'mc', topic: 'Menggunakan Komputer', icon: '⏻',
+      q: 'Saat akan menyalakan komputer, kita menekan tombol ....',
+      options: ['volume suara', 'tombol angka nol', 'tombol power'],
+      a: 2,
+      why: 'Tombol power adalah tombol utama untuk menyalakan perangkat elektronik.'
+    },
+    {
+      id: 20, type: 'mc', topic: 'Bagian Komputer', icon: '🖥️',
+      q: 'Kotak utama komputer yang menjadi otak pemroses perintah sering disebut ....',
+      options: ['CPU / unit sistem', 'mouse', 'kertas gambar'],
+      a: 0,
+      why: 'Unit sistem atau CPU adalah pusat pengolah data dan otak komputer.'
+    },
+    {
+      id: 21, type: 'mc', topic: 'Komunikasi', icon: '👄',
+      q: 'Ketika kita bercerita kepada guru dan teman, kata-kata suara keluar melalui ....',
+      options: ['telinga', 'mulut', 'mata'],
+      a: 1,
+      why: 'Mulut adalah anggota tubuh untuk berbicara dan mengeluarkan suara.'
+    },
+    {
+      id: 22, type: 'mc', topic: 'Media Komunikasi', icon: '📰',
+      q: 'Saat membaca informasi dan berita di koran, kita menerima pesan melalui ....',
+      options: ['suara radio', 'bau wangi', 'tulisan dan gambar'],
+      a: 2,
+      why: 'Koran memuat informasi cetak berupa tulisan teks dan gambar foto.'
+    },
+    {
+      id: 23, type: 'mc', topic: 'Media Komunikasi', icon: '📻',
+      q: 'Ketika mendengarkan siaran dongeng dari radio, kita menerima informasi melalui ....',
+      options: ['suara yang kita dengar', 'gambar bergerak', 'tulisan di layar'],
+      a: 0,
+      why: 'Radio adalah media audio yang menyampaikan informasi lewat suara.'
+    },
+    {
+      id: 24, type: 'mc', topic: 'Bagian Komputer', icon: '🔊',
+      q: 'Ketika komputer memutar lagu anak-anak, alat yang mengeluarkan suara merdu adalah ....',
+      options: ['keyboard', 'speaker', 'monitor'],
+      a: 1,
+      why: 'Speaker berfungsi mengeraskan dan mengeluarkan suara dari komputer.'
+    },
+    {
+      id: 25, type: 'mc', topic: 'Bagian Komputer', icon: '🖱️',
+      q: 'Pasangan alat komputer dan kegunaannya yang paling tepat adalah ....',
+      options: ['monitor — untuk mengetik surat', 'keyboard — menampilkan video', 'mouse — memilih dan mengklik sesuatu di layar'],
+      a: 2,
+      why: 'Mouse digunakan untuk menggerakkan kursor dan mengklik tombol di layar.'
+    },
+
+    // 5 Soal Isian Resmi ASAS 1
+    {
+      id: 26, type: 'fill', topic: 'Berpikir & Logika', icon: '🧠',
+      q: 'Akal pikiran membantu kita untuk ______ sebelum kita memilih tindakan yang baik.',
+      sample: 'berpikir', tip: 'Tulis satu kata (contoh: berpikir).'
+    },
+    {
+      id: 27, type: 'fill', topic: 'Benda di Sekolah', icon: '🏫',
+      q: 'Tuliskan 3 benda yang biasanya ada di dalam ruang kelasmu!',
+      sample: 'meja, kursi, papan tulis', tip: 'Sebutkan tiga benda, boleh dipisah tanda koma.'
+    },
+    {
+      id: 28, type: 'fill', topic: 'Membandingkan Benda', icon: '⚖️',
+      q: 'Tas sekolah lebih berat daripada buku. Buku lebih berat daripada pensil. Urutkan ketiganya dari yang PALING BERAT ke paling ringan!',
+      sample: 'tas sekolah – buku – pensil', tip: 'Mulai dari benda yang paling berat dahulu.'
+    },
+    {
+      id: 29, type: 'fill', topic: 'Alat Komunikasi', icon: '☎️',
+      q: 'Sebutkan 2 alat yang dapat digunakan untuk berkomunikasi atau memberi kabar!',
+      sample: 'ponsel dan kentongan', tip: 'Bisa menyebutkan telepon, surat, radio, atau kentongan.'
+    },
+    {
+      id: 30, type: 'fill', topic: 'Bagian Komputer', icon: '💻',
+      q: 'Sebutkan 2 bagian perangkat komputer yang sudah kamu pelajari!',
+      sample: 'monitor dan mouse', tip: 'Boleh keyboard, monitor, mouse, atau speaker.'
+    },
+
+    // Soal Ekstra Edukatif Kurikulum Merdeka Kelas 1
+    {
+      id: 31, type: 'mc', topic: 'Kesehatan Saat Menggunakan Komputer', icon: '🪑',
+      q: 'Saat duduk di depan komputer, posisi punggung kita yang benar adalah ....',
+      options: ['membungkuk sangat dekat ke layar', 'duduk tegak dan nyaman di kursi', 'tiduran di atas meja'],
+      a: 1,
+      why: 'Duduk tegak melindungi tulang punggung agar tetap sehat dan tidak cepat pegal.'
+    },
+    {
+      id: 32, type: 'mc', topic: 'Kesehatan Saat Menggunakan Komputer', icon: '👀',
+      q: 'Agar mata kita tidak cepat lelah dan sakit, jarak mata dengan layar komputer sebaiknya ....',
+      options: ['sangat menempel ke layar', 'sepanjang satu lengan tangan', 'hanya berjarak satu jari'],
+      a: 1,
+      why: 'Jarak aman sekitar 40-50 cm (sepanjang lengan) menjaga mata tetap sehat.'
+    },
+    {
+      id: 33, type: 'mc', topic: 'Perangkat Komputer', icon: '🖨️',
+      q: 'Alat komputer yang digunakan untuk mencetak gambar atau tugas ke atas kertas adalah ....',
+      options: ['printer (mesin cetak)', 'sapu', 'speaker'],
+      a: 0,
+      why: 'Printer menyemprotkan tinta untuk mencetak tulisan dan gambar ke kertas.'
+    },
+    {
+      id: 34, type: 'mc', topic: 'Merawat Komputer', icon: '🧃',
+      q: 'Bolehkah kita meletakkan gelas minuman manis dan makanan di dekat keyboard komputer?',
+      options: ['Boleh, agar bisa sambil makan', 'Tidak boleh, karena air bisa tumpah dan merusak komputer', 'Sangat dianjurkan'],
+      a: 1,
+      why: 'Tumpahan cairan bisa membuat korsleting dan merusak komponen komputer.'
+    },
+    {
+      id: 35, type: 'mc', topic: 'Teknologi Sehari-hari', icon: '🌳',
+      q: 'Manakah di bawah ini yang merupakan benda ciptaan Tuhan di alam, BUKAN buatan teknologi manusia?',
+      options: ['Laptop', 'Pohon mangga', 'Televisi'],
+      a: 1,
+      why: 'Pohon mangga adalah tumbuhan hidup ciptaan Tuhan Yang Maha Esa.'
+    }
+  ];
+
+  /* ========================================================
+     2. AUDIO SYNTHESIZER (WEB AUDIO API)
+     Zero-external files, instant response!
+     ======================================================== */
+  class SoundPlayer {
+    constructor() {
+      this.enabled = true;
+      this.ctx = null;
+    }
+    init() {
+      if (!this.ctx) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtx) this.ctx = new AudioCtx();
+      }
+    }
+    playPop() {
+      if (!this.enabled) return;
+      this.init();
+      if (!this.ctx) return;
+      try {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(450, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(800, this.ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.2, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.08);
+      } catch (e) {}
+    }
+    playCorrect() {
+      if (!this.enabled) return;
+      this.init();
+      if (!this.ctx) return;
+      try {
+        const now = this.ctx.currentTime;
+        const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
+        notes.forEach((freq, idx) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, now + idx * 0.07);
+          gain.gain.setValueAtTime(0.25, now + idx * 0.07);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.07 + 0.25);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(now + idx * 0.07);
+          osc.stop(now + idx * 0.07 + 0.25);
+        });
+      } catch (e) {}
+    }
+    playFanfare() {
+      if (!this.enabled) return;
+      this.init();
+      if (!this.ctx) return;
+      try {
+        const now = this.ctx.currentTime;
+        const melody = [
+          { f: 523.25, d: 0.15 }, { f: 659.25, d: 0.15 }, { f: 783.99, d: 0.15 },
+          { f: 1046.50, d: 0.4 }
+        ];
+        let offset = 0;
+        melody.forEach(item => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(item.f, now + offset);
+          gain.gain.setValueAtTime(0.3, now + offset);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + offset + item.d);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(now + offset);
+          osc.stop(now + offset + item.d);
+          offset += item.d;
+        });
+      } catch (e) {}
+    }
+  }
+
+  /* ========================================================
+     3. CONFETTI ENGINE (CANVAS BASED)
+     ======================================================== */
+  class ConfettiEngine {
+    constructor(canvasId) {
+      this.canvas = document.getElementById(canvasId);
+      this.ctx = this.canvas.getContext('2d');
+      this.particles = [];
+      this.animId = null;
+      this.resize();
+      window.addEventListener('resize', () => this.resize());
+    }
+    resize() {
+      this.canvas.width = window.innerWidth;
+      this.canvas.height = window.innerHeight;
+    }
+    burst() {
+      const colors = ['#f59e0b', '#10b981', '#3b82f6', '#ec4899', '#8b5cf6', '#ef4444'];
+      this.particles = [];
+      for (let i = 0; i < 90; i++) {
+        this.particles.push({
+          x: this.canvas.width / 2,
+          y: this.canvas.height / 3,
+          r: Math.random() * 8 + 4,
+          dx: (Math.random() - 0.5) * 16,
+          dy: (Math.random() - 0.7) * 18,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          tilt: Math.random() * 10 - 5,
+          tiltAngle: 0,
+          tiltAngleInc: (Math.random() * 0.08) + 0.04
+        });
+      }
+      if (this.animId) cancelAnimationFrame(this.animId);
+      this.render();
+    }
+    render() {
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      let alive = false;
+      this.particles.forEach(p => {
+        p.tiltAngle += p.tiltAngleInc;
+        p.y += (Math.cos(p.tiltAngle) + 3 + p.r / 3);
+        p.x += Math.sin(p.tiltAngle) * 2 + p.dx * 0.8;
+        p.dx *= 0.96;
+        if (p.y < this.canvas.height) alive = true;
+
+        this.ctx.beginPath();
+        this.ctx.lineWidth = p.r;
+        this.ctx.strokeStyle = p.color;
+        this.ctx.moveTo(p.x + p.tilt + p.r, p.y);
+        this.ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r);
+        this.ctx.stroke();
+      });
+      if (alive) {
+        this.animId = requestAnimationFrame(() => this.render());
+      } else {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      }
+    }
+  }
+
+  /* ========================================================
+     4. STATE & APP CONTROLLER
+     ======================================================== */
+  const sound = new SoundPlayer();
+  const confetti = new ConfettiEngine('confettiCanvas');
+  const STORAGE_KEY = 'belajar-sd1-informatika-v2';
+
+  let state = {
+    mode: 'asas', // 'asas' (30 soal), 'quick' (10 soal), 'komputer'
+    studentName: '',
+    avatar: '🤖',
+    questions: [],
+    cursor: 0,
+    answers: {},
+    selfMarks: {},
+    view: 'start', // 'start', 'quiz', 'result'
+    mcExpanded: false
+  };
+
+  const $ = id => document.getElementById(id);
+
+  function escapeHTML(str) {
+    return String(str ?? '').replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+
+  function showToast(text) {
+    const t = $('toast');
+    t.textContent = text;
+    t.classList.remove('hidden');
+    clearTimeout(showToast.timer);
+    showToast.timer = setTimeout(() => t.classList.add('hidden'), 2800);
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {}
+  }
+
+  function loadState() {
+    try {
+      const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+      if (data && Array.isArray(data.questions) && data.questions.length > 0) {
+        state = Object.assign(state, data);
+        return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function getQuestionsForMode(mode) {
+    if (mode === 'asas') {
+      return ALL_QUESTIONS.slice(0, 30);
+    } else if (mode === 'quick') {
+      // 10 soal pilihan acak ramah anak
+      const mcList = ALL_QUESTIONS.filter(q => q.type === 'mc');
+      const shuffled = [...mcList].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, 10);
+    } else if (mode === 'komputer') {
+      return ALL_QUESTIONS.filter(q => q.topic.includes('Komputer'));
+    }
+    return ALL_QUESTIONS.slice(0, 30);
+  }
+
+  function setView(viewName) {
+    state.view = viewName;
+    $('startScreen').classList.toggle('hidden', viewName !== 'start');
+    $('quizScreen').classList.toggle('hidden', viewName !== 'quiz');
+    $('resultScreen').classList.toggle('hidden', viewName !== 'result');
+    saveState();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* Text-to-Speech Ramah Anak */
+  function speakQuestion() {
+    sound.init();
+    if (!('speechSynthesis' in window)) {
+      showToast('Perangkatmu belum mendukung fitur suara.');
+      return;
+    }
+    try {
+      window.speechSynthesis.cancel();
+      const curQ = state.questions[state.cursor];
+      let textToRead = `Soal nomor ${state.cursor + 1}. ${curQ.q}`;
+      if (curQ.type === 'mc') {
+        textToRead += `. Pilihan A: ${curQ.options[0]}. Pilihan B: ${curQ.options[1]}. Pilihan C: ${curQ.options[2]}.`;
+      } else {
+        textToRead += `. Tulislah jawaban singkatmu.`;
+      }
+      const utter = new SpeechSynthesisUtterance(textToRead);
+      utter.lang = 'id-ID';
+      utter.rate = 0.84; // Pacing ramah dan tenang untuk anak SD kelas 1
+      utter.pitch = 1.1; // Nada riang
+      window.speechSynthesis.speak(utter);
+    } catch (e) {
+      showToast('Tidak dapat memutar suara.');
+    }
+  }
+
+  /* Render Soal Saat Ini */
+  function renderQuestion() {
+    const q = state.questions[state.cursor];
+    const total = state.questions.length;
+    
+    $('quizIndexBadge').textContent = `Soal ${state.cursor + 1} dari ${total}`;
+    $('quizTopicBadge').textContent = q.topic;
+    
+    // Progress calculation
+    const answeredCount = Object.keys(state.answers).filter(k => {
+      const val = state.answers[k];
+      return val !== null && val !== undefined && String(val).trim() !== '';
+    }).length;
+    const pct = Math.round((answeredCount / total) * 100);
+    $('quizProgressBar').style.width = pct + '%';
+    $('progressText').textContent = `${answeredCount} dari ${total} terjawab`;
+    $('progressPercentage').textContent = `${pct}%`;
+
+    // Render Quick Number Nav
+    const nav = $('questionNavGrid');
+    nav.innerHTML = state.questions.map((item, idx) => {
+      const isAns = state.answers[idx] !== undefined && state.answers[idx] !== null && String(state.answers[idx]).trim() !== '';
+      const isAct = state.cursor === idx;
+      const isFill = item.type === 'fill';
+      return `<button type="button" class="num-pill ${isAns ? 'answered' : ''} ${isAct ? 'active' : ''} ${isFill ? 'is-fill' : ''}" data-nav="${idx}">
+        ${idx + 1}
+      </button>`;
+    }).join('');
+
+    // Question content
+    $('qIllustration').textContent = q.icon || '💡';
+    $('qText').textContent = q.q;
+
+    const optContainer = $('optionsContainer');
+    if (q.type === 'mc') {
+      const chosen = state.answers[state.cursor];
+      optContainer.innerHTML = `
+        <div class="options-grid">
+          ${q.options.map((opt, i) => `
+            <button type="button" class="option-btn ${chosen === i ? 'selected' : ''}" data-choice="${i}">
+              <span class="option-letter">${'ABC'[i]}</span>
+              <span>${escapeHTML(opt)}</span>
+            </button>
+          `).join('')}
+        </div>
+      `;
+    } else {
+      const val = state.answers[state.cursor] || '';
+      optContainer.innerHTML = `
+        <div class="fill-box">
+          <textarea id="fillInputBox" class="fill-input" placeholder="Tulis jawaban singkatmu di sini...">${escapeHTML(val)}</textarea>
+          <div class="fill-tip">💡 ${escapeHTML(q.tip || 'Tuliskan jawaban yang sesuai')}</div>
+        </div>
+      `;
+      const txt = $('fillInputBox');
+      txt.addEventListener('input', e => {
+        state.answers[state.cursor] = e.target.value;
+        saveState();
+        renderNavOnly();
+      });
+    }
+
+    $('prevQuestionBtn').disabled = state.cursor === 0;
+    $('nextQuestionBtn').classList.toggle('hidden', state.cursor === total - 1);
+    $('finishQuizBtn').classList.toggle('hidden', state.cursor !== total - 1);
+  }
+
+  function renderNavOnly() {
+    const total = state.questions.length;
+    const answeredCount = Object.keys(state.answers).filter(k => {
+      const val = state.answers[k];
+      return val !== null && val !== undefined && String(val).trim() !== '';
+    }).length;
+    const pct = Math.round((answeredCount / total) * 100);
+    $('quizProgressBar').style.width = pct + '%';
+    $('progressText').textContent = `${answeredCount} dari ${total} terjawab`;
+    $('progressPercentage').textContent = `${pct}%`;
+
+    const nav = $('questionNavGrid');
+    nav.innerHTML = state.questions.map((item, idx) => {
+      const isAns = state.answers[idx] !== undefined && state.answers[idx] !== null && String(state.answers[idx]).trim() !== '';
+      const isAct = state.cursor === idx;
+      const isFill = item.type === 'fill';
+      return `<button type="button" class="num-pill ${isAns ? 'answered' : ''} ${isAct ? 'active' : ''} ${isFill ? 'is-fill' : ''}" data-nav="${idx}">
+        ${idx + 1}
+      </button>`;
+    }).join('');
+  }
+
+  function jumpToQuestion(idx) {
+    if (idx < 0 || idx >= state.questions.length) return;
+    sound.playPop();
+    state.cursor = idx;
+    renderQuestion();
+    saveState();
+  }
+
+  /* Hitung Skor & Hasil */
+  function calculateResults() {
+    const total = state.questions.length;
+    let mcCorrect = 0;
+    let mcTotal = 0;
+    let fillTotal = 0;
+
+    state.questions.forEach((q, idx) => {
+      if (q.type === 'mc') {
+        mcTotal++;
+        if (state.answers[idx] === q.a) mcCorrect++;
+      } else {
+        fillTotal++;
+      }
+    });
+
+    let fillSelfCorrect = 0;
+    Object.keys(state.selfMarks).forEach(k => {
+      if (state.selfMarks[k] === true) fillSelfCorrect++;
+    });
+
+    // Score on 100-point scale
+    let rawScore = 0;
+    if (fillTotal === 0) {
+      rawScore = Math.round((mcCorrect / mcTotal) * 100);
+    } else {
+      // 80% weight for MC, 20% weight for self-checked fill-ins
+      const mcPart = (mcCorrect / mcTotal) * 80;
+      const fillPart = (fillSelfCorrect / fillTotal) * 20;
+      rawScore = Math.round(mcPart + fillPart);
+    }
+
+    return { mcCorrect, mcTotal, fillTotal, fillSelfCorrect, rawScore, total };
+  }
+
+  function renderResultScreen() {
+    const res = calculateResults();
+    const student = state.studentName.trim() || 'Siswa Hebat';
+
+    // Stars
+    let starsCount = 1;
+    let feedback = '';
+    let title = '';
+
+    if (res.rawScore >= 85) {
+      starsCount = 3;
+      title = `Luar Biasa, ${student}! 🏆`;
+      feedback = 'Hebat sekali! Kamu menjawab soal dengan sangat teliti dan pintar. Pertahankan prestasimu ya!';
+    } else if (res.rawScore >= 70) {
+      starsCount = 2;
+      title = `Bagus Sekali, ${student}! 🌟`;
+      feedback = 'Kerja yang bagus! Kamu sudah memahami banyak hal tentang komputer dan teknologi.';
+    } else {
+      starsCount = 1;
+      title = `Terus Semangat, ${student}! 💪`;
+      feedback = 'Jangan menyerah ya! Ayo baca kembali materi dan coba latihan lagi, kamu pasti bisa!';
+    }
+
+    $('resultMainTitle').textContent = title;
+    $('finalScoreVal').textContent = res.rawScore;
+    $('resultFeedbackText').textContent = feedback;
+
+    // Render Stars HTML
+    const starRow = $('starsContainer');
+    starRow.innerHTML = Array(starsCount).fill('<span class="star-anim">⭐</span>').join('');
+
+    // Badges
+    const badgeBox = $('badgesContainer');
+    const badges = ['🏅 Bintang Keberanian', '💻 Sahabat Informatika'];
+    if (res.rawScore >= 85) badges.push('🌟 Juara Kelas 1', '⚡ Pemikir Cermat');
+    if (res.mcCorrect === res.mcTotal) badges.push('🎯 Pilihan Ganda Sempurna');
+    badgeBox.innerHTML = badges.map(b => `<span class="badge-item">${b}</span>`).join('');
+
+    // Certificate
+    $('certStudentName').textContent = `${state.avatar} ${student}`;
+    $('certDescription').innerHTML = `
+      Atas ketekunan dan keberhasilan meraih <strong>Nilai ${res.rawScore} (${starsCount} Bintang Emas)</strong> dalam menyelesaikan Latihan Pembelajaran Informatika Kelas 1 SD Al Huda Semarang.
+    `;
+    const today = new Date();
+    const months = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+    $('certDateVal').textContent = `${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}`;
+
+    // Fill Review
+    const fillSection = $('fillReviewSection');
+    const fillItems = state.questions.map((q, idx) => ({ q, idx })).filter(item => item.q.type === 'fill');
+    
+    if (fillItems.length === 0) {
+      fillSection.classList.add('hidden');
+    } else {
+      fillSection.classList.remove('hidden');
+      $('fillReviewList').innerHTML = fillItems.map((item, order) => {
+        const studentAns = state.answers[item.idx] || '— belum diisi —';
+        const mark = state.selfMarks[item.idx];
+        return `
+          <div class="review-item">
+            <div class="review-q">Soal Isian ${order + 1}. ${escapeHTML(item.q.q)}</div>
+            <div class="review-answer-row"><strong>Jawabanmu:</strong> ${escapeHTML(studentAns)}</div>
+            <div class="review-why">💡 <strong>Contoh Jawaban:</strong> ${escapeHTML(item.q.sample)}</div>
+            <div class="self-mark-btns no-print">
+              <button type="button" class="btn btn-sm ${mark === true ? 'btn-success' : 'btn-outline'}" data-mark="${item.idx}" data-val="yes">
+                ✓ Benar
+              </button>
+              <button type="button" class="btn btn-sm ${mark === false ? 'btn-secondary' : 'btn-outline'}" data-mark="${item.idx}" data-val="no">
+                ↻ Perlu Diperbaiki
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // MC Review
+    const mcList = $('mcReviewList');
+    mcList.innerHTML = state.questions.map((q, idx) => {
+      if (q.type !== 'mc') return '';
+      const ans = state.answers[idx];
+      const isCorrect = ans === q.a;
+      return `
+        <div class="review-item ${isCorrect ? 'correct' : 'wrong'}">
+          <div class="review-q">${idx + 1}. ${escapeHTML(q.q)}</div>
+          <div class="review-answer-row">
+            <strong>Jawabanmu:</strong> ${ans !== undefined && ans !== null ? `(${ 'ABC'[ans]}) ${escapeHTML(q.options[ans])}` : '<em>Belum dijawab</em>'}
+            <span style="margin-left:8px; font-weight:800; color:${isCorrect ? '#16a34a' : '#dc2626'}">
+              ${isCorrect ? '✓ TEPAT' : '✕ BELUM TEPAT'}
+            </span>
+          </div>
+          <div class="review-why">
+            <strong>Kunci Jawaban:</strong> (${'ABC'[q.a]}) ${escapeHTML(q.options[q.a])}<br>
+            <em>${escapeHTML(q.why)}</em>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    confetti.burst();
+    sound.playFanfare();
+  }
+
+  /* ========================================================
+     5. EVENT HANDLERS & INITIALIZATION
+     ======================================================== */
+  // Sound toggle
+  $('soundToggleBtn').addEventListener('click', () => {
+    sound.enabled = !sound.enabled;
+    sound.init();
+    $('soundIcon').textContent = sound.enabled ? '🔊' : '🔇';
+    $('soundLabel').textContent = sound.enabled ? 'Suara ON' : 'Suara MUTE';
+    $('soundToggleBtn').classList.toggle('active', sound.enabled);
+  });
+
+  // Avatar Picker
+  $('avatarPicker').addEventListener('click', e => {
+    const btn = e.target.closest('.avatar-btn');
+    if (!btn) return;
+    sound.playPop();
+    document.querySelectorAll('.avatar-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    state.avatar = btn.dataset.avatar;
+    $('mascotIcon').textContent = state.avatar;
+    saveState();
+  });
+
+  // Mode Selection
+  $('modeList').addEventListener('click', e => {
+    const card = e.target.closest('.mode-card');
+    if (!card) return;
+    sound.playPop();
+    document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    state.mode = card.dataset.mode;
+    saveState();
+  });
+
+  // Start Exam
+  $('startExamBtn').addEventListener('click', () => {
+    sound.init();
+    sound.playPop();
+    state.studentName = $('studentNameInput').value.trim();
+    state.questions = getQuestionsForMode(state.mode);
+    state.cursor = 0;
+    state.answers = {};
+    state.selfMarks = {};
+    state.mcExpanded = false;
+    renderQuestion();
+    setView('quiz');
+  });
+
+  // Resume Exam
+  $('resumeExamBtn').addEventListener('click', () => {
+    sound.init();
+    sound.playPop();
+    if (state.view === 'result') {
+      renderResultScreen();
+      setView('result');
+    } else {
+      renderQuestion();
+      setView('quiz');
+    }
+  });
+
+  // Number Grid Navigator Click
+  $('questionNavGrid').addEventListener('click', e => {
+    const btn = e.target.closest('.num-pill');
+    if (!btn) return;
+    jumpToQuestion(Number(btn.dataset.nav));
+  });
+
+  // Choice Selection (A, B, C)
+  $('optionsContainer').addEventListener('click', e => {
+    const btn = e.target.closest('.option-btn');
+    if (!btn) return;
+    sound.playPop();
+    const choice = Number(btn.dataset.choice);
+    state.answers[state.cursor] = choice;
+    saveState();
+    renderQuestion();
+  });
+
+  // Read Aloud (TTS)
+  $('ttsSpeakBtn').addEventListener('click', speakQuestion);
+
+  // Next & Prev
+  $('prevQuestionBtn').addEventListener('click', () => {
+    sound.playPop();
+    jumpToQuestion(state.cursor - 1);
+  });
+  $('nextQuestionBtn').addEventListener('click', () => {
+    sound.playPop();
+    jumpToQuestion(state.cursor + 1);
+  });
+
+  // Finish Quiz
+  $('finishQuizBtn').addEventListener('click', () => {
+    const total = state.questions.length;
+    const unanswered = [];
+    state.questions.forEach((q, i) => {
+      const a = state.answers[i];
+      if (a === undefined || a === null || String(a).trim() === '') unanswered.push(i + 1);
+    });
+
+    if (unanswered.length > 0) {
+      if (!confirm(`Ada ${unanswered.length} nomor yang belum kamu jawab (nomor: ${unanswered.slice(0, 5).join(', ')}${unanswered.length > 5 ? '...' : ''}). Tetap ingin melihat nilai sekarang?`)) {
+        return;
+      }
+    }
+    renderResultScreen();
+    setView('result');
+  });
+
+  // Self Marking for Fill-ins
+  $('fillReviewList').addEventListener('click', e => {
+    const btn = e.target.closest('[data-mark]');
+    if (!btn) return;
+    sound.playPop();
+    const idx = Number(btn.dataset.mark);
+    const val = btn.dataset.val === 'yes';
+    state.selfMarks[idx] = val;
+    saveState();
+    renderResultScreen();
+  });
+
+  // Toggle MC Review
+  $('toggleMcReviewBtn').addEventListener('click', () => {
+    sound.playPop();
+    state.mcExpanded = !state.mcExpanded;
+    $('mcReviewList').classList.toggle('hidden', !state.mcExpanded);
+    $('reviewArrow').textContent = state.mcExpanded ? '▲' : '▼';
+  });
+
+  // Print Certificate / PDF
+  $('printCertBtn').addEventListener('click', () => {
+    window.print();
+  });
+
+  // Retry Exam
+  $('retryExamBtn').addEventListener('click', () => {
+    if (confirm('Ulangi latihan dari awal dengan soal-soal ini?')) {
+      state.cursor = 0;
+      state.answers = {};
+      state.selfMarks = {};
+      renderQuestion();
+      setView('quiz');
+    }
+  });
+
+  // Back to Home
+  $('homeBtn').addEventListener('click', () => {
+    setView('start');
+  });
+
+  // Keyboard shortcut for accessibility
+  document.addEventListener('keydown', e => {
+    if (state.view !== 'quiz' || e.target.matches('input, textarea')) return;
+    if (e.key === 'ArrowRight' && state.cursor < state.questions.length - 1) {
+      jumpToQuestion(state.cursor + 1);
+    } else if (e.key === 'ArrowLeft' && state.cursor > 0) {
+      jumpToQuestion(state.cursor - 1);
+    } else if (['1','2','3'].includes(e.key) && state.questions[state.cursor].type === 'mc') {
+      state.answers[state.cursor] = Number(e.key) - 1;
+      saveState();
+      renderQuestion();
+    }
+  });
+
+  // App Initialization
+  const hasSaved = loadState();
+  if (hasSaved && state.questions.length > 0) {
+    $('studentNameInput').value = state.studentName || '';
+    $('resumeExamBtn').classList.remove('hidden');
+    // Set avatar
+    document.querySelectorAll('.avatar-btn').forEach(b => {
+      b.classList.toggle('selected', b.dataset.avatar === state.avatar);
+    });
+    $('mascotIcon').textContent = state.avatar || '🤖';
+    if (state.view === 'result') {
+      renderResultScreen();
+      setView('result');
+    } else if (state.view === 'quiz') {
+      renderQuestion();
+      setView('quiz');
+    } else {
+      setView('start');
+    }
+  } else {
+    state.questions = getQuestionsForMode('asas');
+    setView('start');
+  }
+  </script>
+</body>
+</html>
