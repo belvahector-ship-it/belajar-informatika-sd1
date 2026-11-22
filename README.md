@@ -115,8 +115,9 @@ Web ini bisa dijalankan tanpa koneksi internet sama sekali:
 
 ---
 
-## 👨‍🏫 Profil Penyusun Materi
-- **Penyusun Soal:** Albadru Muh Izul Khaq, S.Kom
+## 👨‍🏫 Profil Penyusun & Pengembang
+- **Penyusun Asli:** Albadru Muh Izul Khaq, S.Kom
+- **Deploy & Develop by:** Belva Fahrozi, M.Kom
 - **Institusi:** SD Al Huda Semarang
 - **Mata Pelajaran:** Informatika / TIK Kelas 1 SD
 - **Tahun Pelajaran:** 2026/2027
