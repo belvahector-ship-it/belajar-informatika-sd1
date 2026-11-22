@@ -41,21 +41,24 @@ Didesain khusus untuk anak usia **6–7 tahun (Anak SD Kelas 1)** dengan antarmu
    - Kunci jawaban pilihan ganda dilengkapi alasan sederhana *"Kenapa begitu?"*.
    - Soal isian dilengkapi contoh jawaban dan tombol koreksi mandiri (*✓ Benar* atau *↻ Perlu Diperbaiki*) yang otomatis memperbarui nilai akhir.
 
-7. **🎯 3 Mode Belajar Fleksibel**
-   - **📋 Latihan ASAS 1 Lengkap (30 Soal)**: 25 Pilihan Ganda + 5 Isian Singkat.
-   - **⚡ Kuis Kilat Bintang (10 Soal Acak)**: Kuis cepat 5 menit untuk bermain harian.
-   - **🖥️ Fokus Bagian Komputer**: Latihan khusus mengenali Monitor, Mouse, Keyboard, CPU, dan Speaker.
+7. **🎯 5 Mode Belajar Fleksibel (57 Soal Lengkap)**
+   - **📋 Latihan ASAS 1 Lengkap (30 Soal)**: 25 Pilihan Ganda + 5 Isian Singkat sesuai kisi-kisi resmi semester 1.
+   - **⚡ Kuis Kilat Bintang (10 Soal Acak)**: Kuis cepat 5 menit untuk bermain harian mengumpulkan 3 bintang.
+   - **🖥️ Bagian Komputer, Mouse & Keyboard (20 Soal)**: Mengenal Monitor, CPU, Spasi, Enter, Double-Click, Scroll, Flashdisk & Printer.
+   - **🧩 Tantangan Logika & Pola (10 Soal)**: Urutan algoritma cuci tangan, pola warna & bentuk bangun (Kurikulum Merdeka).
+   - **🌟 Tantangan Akbar Nasional (57 Soal Lengkap)**: Uji seluruh penguasaan materi TIK / Informatika kelas 1 SD!
 
 ---
 
-## 📚 Ruang Lingkup Materi
+## 📚 Ruang Lingkup Materi Kurikulum Nasional & Merdeka
 
 Materi disusun berdasarkan Capaian Pembelajaran Informatika / Literasi Digital Kelas 1 SD:
-- **Bab 1:** Mengenal Benda & Teknologi di Sekitar Kita (Benda alam vs buatan manusia, perkakas sehari-hari).
-- **Bab 2:** Bagian-Bagian Komputer & Perangkat Digital (Monitor, Keyboard, Mouse, CPU, Speaker, Printer).
-- **Bab 3:** Cara Menggunakan Komputer dengan Benar & Sehat (Posisi duduk tegak, jarak aman mata, tombol power, merawat komputer).
-- **Bab 4:** Komunikasi Tradisional & Modern (Kentongan, telepon, ponsel pintar, radio, televisi, koran).
-- **Bab 5:** Berpikir Komputasional Sederhana (Mengurutkan langkah/algoritma kegiatan harian, mengenali pola).
+- **Bab 1: Teknologi di Sekitar Kita:** Benda alam ciptaan Tuhan vs teknologi buatan manusia, perkakas sehari-hari.
+- **Bab 2: Perangkat Keras Komputer (Hardware):** Monitor, CPU, Keyboard, Mouse, Speaker, Printer, Laptop, Flashdisk, Webcam, Headphone.
+- **Bab 3: Tombol Keyboard & Penggunaan Mouse:** Fungsi tombol Spasi (jarak), Enter (baris baru), Backspace (hapus), klik kiri, double-click, dan roda scroll.
+- **Bab 4: Kesehatan & Keselamatan Berkomputer (K3):** Posisi duduk ergonomis tegak, jarak pandang aman mata, istirahat mata, aturan lab komputer, dan mematikan lewat Shut Down.
+- **Bab 5: Komunikasi Tradisional & Modern:** Kentongan, surat, radio, telepon kabel, ponsel pintar, dan panggilan video (video call).
+- **Bab 6: Berpikir Komputasional Dasar:** Algoritma langkah harian berurutan, pengenalan pola berulang (warna, bangun, buah), dan pemilahan benda non-komputer.
 
 ---
 

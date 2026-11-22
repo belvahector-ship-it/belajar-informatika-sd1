@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#2563eb">
-  <meta name="description" content="Web Pembelajaran & Latihan Interaktif Informatika Kelas 1 SD Al Huda Semarang. Dilengkapi audio bacakan soal, efek suara seru, sistem bintang nilai, dan sertifikat prestasi!">
+  <meta name="description" content="Web Pembelajaran & Latihan Interaktif Informatika Kelas 1 SD Kurikulum Nasional & ASAS 1. 57 Soal lengkap dengan audio bacakan soal, efek suara seru, sistem bintang nilai, dan sertifikat prestasi!">
   <title>Belajar Informatika Kelas 1 SD — Seru & Interaktif 🌟</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -973,7 +973,7 @@
       <h2>Ayo Belajar Informatika!<br>Kelas 1 SD Ceria</h2>
       <p>Mengenal komputer, peralatan teknologi di sekitar kita, cara duduk yang sehat, dan bermain tebak gambar seru!</p>
       <div class="hero-chips">
-        <span class="chip">📝 30 Soal ASAS 1</span>
+        <span class="chip">📝 57 Soal Kurikulum Nasional</span>
         <span class="chip">🔊 Suara Bacakan Soal</span>
         <span class="chip">⭐ Sistem 3 Bintang</span>
         <span class="chip">🏆 Sertifikat Prestasi</span>
@@ -1029,21 +1029,35 @@
                 <div class="mode-icon">📋</div>
                 <div>
                   <div class="mode-title">Latihan ASAS 1 Lengkap (30 Soal)</div>
-                  <div class="mode-desc">25 Pilihan Ganda + 5 Isian Singkat sesuai kisi-kisi resmi.</div>
+                  <div class="mode-desc">25 Pilihan Ganda + 5 Isian Singkat sesuai kisi-kisi resmi semester 1.</div>
                 </div>
               </button>
               <button type="button" class="mode-card" data-mode="quick">
                 <div class="mode-icon">⚡</div>
                 <div>
                   <div class="mode-title">Kuis Kilat Bintang (10 Soal Acak)</div>
-                  <div class="mode-desc">Bermain cepat 5 menit untuk menguji ketelitianmu!</div>
+                  <div class="mode-desc">Bermain cepat 5 menit mengumpulkan 3 bintang emas!</div>
                 </div>
               </button>
               <button type="button" class="mode-card" data-mode="komputer">
                 <div class="mode-icon">🖥️</div>
                 <div>
-                  <div class="mode-title">Fokus: Bagian-Bagian Komputer</div>
-                  <div class="mode-desc">Mengenal Monitor, Mouse, Keyboard, CPU, dan Speaker.</div>
+                  <div class="mode-title">Bagian Komputer, Mouse &amp; Keyboard</div>
+                  <div class="mode-desc">Mengenal Monitor, CPU, Spasi, Enter, Double-Click &amp; Printer.</div>
+                </div>
+              </button>
+              <button type="button" class="mode-card" data-mode="pola">
+                <div class="mode-icon">🧩</div>
+                <div>
+                  <div class="mode-title">Tantangan Logika &amp; Pola (Kurikulum Merdeka)</div>
+                  <div class="mode-desc">Tebak urutan algoritma cuci tangan, pola warna &amp; bentuk bangun.</div>
+                </div>
+              </button>
+              <button type="button" class="mode-card" data-mode="semua">
+                <div class="mode-icon">🌟</div>
+                <div>
+                  <div class="mode-title">Tantangan Akbar Nasional (57 Soal Lengkap)</div>
+                  <div class="mode-desc">Uji seluruh pemahaman materi Informatika kelas 1 SD!</div>
                 </div>
               </button>
             </div>
@@ -1446,7 +1460,7 @@
       sample: 'monitor dan mouse', tip: 'Boleh keyboard, monitor, mouse, atau speaker.'
     },
 
-    // Soal Ekstra Edukatif Kurikulum Merdeka Kelas 1
+    // Soal Tambahan Kurikulum Nasional / Merdeka Kelas 1 SD
     {
       id: 31, type: 'mc', topic: 'Kesehatan Saat Menggunakan Komputer', icon: '🪑',
       q: 'Saat duduk di depan komputer, posisi punggung kita yang benar adalah ....',
@@ -1457,30 +1471,176 @@
     {
       id: 32, type: 'mc', topic: 'Kesehatan Saat Menggunakan Komputer', icon: '👀',
       q: 'Agar mata kita tidak cepat lelah dan sakit, jarak mata dengan layar komputer sebaiknya ....',
-      options: ['sangat menempel ke layar', 'sepanjang satu lengan tangan', 'hanya berjarak satu jari'],
+      options: ['sangat menempel ke layar', 'sepanjang satu lengan tangan (sekitar 40-50 cm)', 'hanya berjarak satu jari'],
       a: 1,
-      why: 'Jarak aman sekitar 40-50 cm (sepanjang lengan) menjaga mata tetap sehat.'
+      why: 'Jarak aman sepanjang lengan menjaga kesehatan mata dari kelelahan.'
     },
     {
       id: 33, type: 'mc', topic: 'Perangkat Komputer', icon: '🖨️',
       q: 'Alat komputer yang digunakan untuk mencetak gambar atau tugas ke atas kertas adalah ....',
-      options: ['printer (mesin cetak)', 'sapu', 'speaker'],
+      options: ['printer (mesin cetak)', 'sapu lantai', 'speaker'],
       a: 0,
-      why: 'Printer menyemprotkan tinta untuk mencetak tulisan dan gambar ke kertas.'
+      why: 'Printer menyemprotkan tinta untuk mencetak tulisan dan gambar ke lembaran kertas.'
     },
     {
       id: 34, type: 'mc', topic: 'Merawat Komputer', icon: '🧃',
       q: 'Bolehkah kita meletakkan gelas minuman manis dan makanan di dekat keyboard komputer?',
       options: ['Boleh, agar bisa sambil makan', 'Tidak boleh, karena air bisa tumpah dan merusak komputer', 'Sangat dianjurkan'],
       a: 1,
-      why: 'Tumpahan cairan bisa membuat korsleting dan merusak komponen komputer.'
+      why: 'Tumpahan cairan bisa membuat korsleting dan merusak komponen elektronik komputer.'
     },
     {
       id: 35, type: 'mc', topic: 'Teknologi Sehari-hari', icon: '🌳',
       q: 'Manakah di bawah ini yang merupakan benda ciptaan Tuhan di alam, BUKAN buatan teknologi manusia?',
       options: ['Laptop', 'Pohon mangga', 'Televisi'],
       a: 1,
-      why: 'Pohon mangga adalah tumbuhan hidup ciptaan Tuhan Yang Maha Esa.'
+      why: 'Pohon mangga adalah makhluk hidup ciptaan Tuhan Yang Maha Esa.'
+    },
+    {
+      id: 36, type: 'mc', topic: 'Program Komputer Sederhana', icon: '🎨',
+      q: 'Untuk menggambar rumah, gunung, dan mewarnainya di komputer, kita bisa membuka program ....',
+      options: ['Paint (program menggambar)', 'Kalkulator hitung', 'Jam alarm'],
+      a: 0,
+      why: 'Paint adalah program komputer ramah anak untuk belajar menggambar dan mewarnai.'
+    },
+    {
+      id: 37, type: 'mc', topic: 'Tombol Keyboard', icon: '⌨️',
+      q: 'Tombol pada keyboard yang bentuknya paling panjang di bagian bawah dan berguna memberi jarak antar kata adalah ....',
+      options: ['Tombol Enter', 'Tombol Spasi (Space bar)', 'Tombol huruf Z'],
+      a: 1,
+      why: 'Tombol spasi yang panjang ditekan dengan jempol untuk memberi jarak antar kata.'
+    },
+    {
+      id: 38, type: 'mc', topic: 'Tombol Keyboard', icon: '⏎',
+      q: 'Saat mengetik di komputer dan ingin pindah ke baris baru di bawahnya, kita menekan tombol ....',
+      options: ['Tombol Enter', 'Tombol angka nol', 'Tombol power'],
+      a: 0,
+      why: 'Tombol Enter berfungsi memindahkan kursor tulisan turun ke baris berikutnya.'
+    },
+    {
+      id: 39, type: 'mc', topic: 'Tombol Keyboard', icon: '⌫',
+      q: 'Budi salah mengetik satu huruf. Untuk menghapus huruf yang keliru itu, Budi menekan tombol ....',
+      options: ['Backspace (tombol hapus)', 'Tombol Spasi', 'Tombol volume'],
+      a: 0,
+      why: 'Tombol Backspace menghapus satu huruf di sebelah kiri kursor.'
+    },
+    {
+      id: 40, type: 'mc', topic: 'Menggunakan Mouse', icon: '🖱️',
+      q: 'Untuk membuka permainan belajar atau aplikasi di layar komputer, kita mengklik tombol mouse sebanyak ....',
+      options: ['Satu kali pelan-pelan', 'Dua kali secara cepat (double click)', 'Sepuluh kali'],
+      a: 1,
+      why: 'Klik ganda (double-click) dua kali dengan cepat digunakan untuk membuka program.'
+    },
+    {
+      id: 41, type: 'mc', topic: 'Menggunakan Mouse', icon: '🎡',
+      q: 'Roda putar kecil di bagian tengah mouse berguna untuk ....',
+      options: ['Menggulung tampilan layar ke atas dan bawah (scroll)', 'Mengeluarkan aroma wangi', 'Mematikan lampu kamar'],
+      a: 0,
+      why: 'Roda scroll digerakkan dengan jari telunjuk untuk menggulung halaman layar.'
+    },
+    {
+      id: 42, type: 'mc', topic: 'Perangkat Komputer', icon: '🎧',
+      q: 'Alat yang kita pasang di telinga agar suara lagu komputer terdengar jelas tanpa mengganggu teman di kelas adalah ....',
+      options: ['Kacamata renang', 'Headphone / headset', 'Topi sekolah'],
+      a: 1,
+      why: 'Headphone menyalurkan suara langsung ke telinga kita secara pribadi.'
+    },
+    {
+      id: 43, type: 'mc', topic: 'Perangkat Komputer', icon: '💻',
+      q: 'Komputer yang berukuran ringkas, memiliki layar yang bisa dilipat, ada baterainya, dan mudah dibawa ke mana-mana disebut ....',
+      options: ['Laptop (komputer jinjing)', 'Kulkas dua pintu', 'Mesin cuci'],
+      a: 0,
+      why: 'Laptop adalah komputer portabel yang praktis dibawa bepergian.'
+    },
+    {
+      id: 44, type: 'mc', topic: 'Perangkat Komputer', icon: '💾',
+      q: 'Benda kecil yang dicolokkan ke komputer untuk menyimpan hasil tugas gambar kita agar bisa dibuka di rumah adalah ....',
+      options: ['Penghapus pensil', 'Flashdisk (USB drive)', 'Kapur tulis'],
+      a: 1,
+      why: 'Flashdisk adalah tempat menyimpan berkas digital yang aman dan mudah dibawa di saku.'
+    },
+    {
+      id: 45, type: 'mc', topic: 'Menggunakan Komputer', icon: '🔌',
+      q: 'Setelah selesai belajar menggunakan komputer, cara mematikan yang benar dan aman adalah ....',
+      options: ['Langsung mencabut kabel listrik dari tembok', 'Klik menu Start lalu pilih Shut Down (Matikan)', 'Menyiram komputer dengan air'],
+      a: 1,
+      why: 'Mematikan komputer melalui menu Shut Down menjaga program dan data agar tidak rusak.'
+    },
+    {
+      id: 46, type: 'mc', topic: 'Mengenal TIK', icon: '📚',
+      q: 'Huruf singkatan T-I-K memiliki kepanjangan yaitu ....',
+      options: ['Teknologi Informasi dan Komunikasi', 'Televisi Internet Kabel', 'Tempat Istirahat Kita'],
+      a: 0,
+      why: 'TIK adalah singkatan dari Teknologi Informasi dan Komunikasi.'
+    },
+    {
+      id: 47, type: 'mc', topic: 'Berpikir Komputasional & Logika', icon: '🧼',
+      q: 'Perhatikan langkah mencuci tangan: (1) Basahi tangan, (2) Gunakan sabun, (3) Bilas air bersih, (4) Keringkan. Urutan yang paling benar adalah ....',
+      options: ['1 - 2 - 3 - 4', '4 - 3 - 2 - 1', '2 - 4 - 1 - 3'],
+      a: 0,
+      why: 'Urutan mencuci tangan yang higienis: basahi (1), sabuni (2), bilas (3), lalu keringkan (4).'
+    },
+    {
+      id: 48, type: 'mc', topic: 'Berpikir Komputasional & Logika', icon: '⭐',
+      q: 'Perhatikan pola berikut: ⭐ 🔵 ⭐ 🔵 ⭐ .... Gambar bentuk selanjutnya yang tepat adalah ....',
+      options: ['⭐ (Bintang)', '🔵 (Lingkaran biru)', '🔺 (Segitiga)'],
+      a: 1,
+      why: 'Polanya berulang selang-seling antara Bintang dan Lingkaran. Setelah Bintang adalah Lingkaran biru.'
+    },
+    {
+      id: 49, type: 'mc', topic: 'Berpikir Komputasional & Logika', icon: '🍎',
+      q: 'Perhatikan pola buah ini: 🍎 🍌 🍎 🍌 🍎 .... Buah berikutnya yang tepat untuk melanjutkan pola adalah ....',
+      options: ['🍌 (Pisang)', '🍎 (Apel)', '🍇 (Anggur)'],
+      a: 0,
+      why: 'Pola buah berulang: Apel lalu Pisang. Setelah Apel adalah Pisang.'
+    },
+    {
+      id: 50, type: 'mc', topic: 'Memilah Benda', icon: '🍳',
+      q: 'Di antara benda berikut, manakah yang BUKAN merupakan bagian dari peralatan komputer?',
+      options: ['Monitor', 'Wajan penggorengan', 'Keyboard'],
+      a: 1,
+      why: 'Wajan penggorengan adalah alat memasak di dapur, bukan bagian komputer.'
+    },
+    {
+      id: 51, type: 'mc', topic: 'Alat Komunikasi', icon: '📹',
+      q: 'Saat kita menelepon kakek menggunakan panggilan video (video call), kita bisa ....',
+      options: ['Mendengar suara kakek dan melihat wajahnya di layar', 'Mengirim makanan matang lewat layar', 'Menyentuh baju kakek secara langsung'],
+      a: 0,
+      why: 'Panggilan video menyalurkan gambar wajah dan suara secara bersamaan lewat internet.'
+    },
+    {
+      id: 52, type: 'mc', topic: 'Perangkat Komputer', icon: '📷',
+      q: 'Kamera kecil yang berada di atas layar laptop untuk menampilkan wajah kita saat belajar online bersama guru disebut ....',
+      options: ['Speaker', 'Webcam (kamera komputer)', 'Mouse'],
+      a: 1,
+      why: 'Webcam bertugas menangkap video wajah kita agar terlihat oleh guru dan teman-teman.'
+    },
+
+    // Soal Isian Tambahan Kurikulum Nasional
+    {
+      id: 53, type: 'fill', topic: 'Tombol Keyboard', icon: '⌨️',
+      q: 'Tombol paling panjang di keyboard yang berfungsi memberi jarak antar kata disebut tombol ______.',
+      sample: 'spasi', tip: 'Tulis satu kata (contoh: spasi).'
+    },
+    {
+      id: 54, type: 'fill', topic: 'Perangkat Komputer', icon: '🖨️',
+      q: 'Alat yang digunakan untuk mencetak tulisan dan gambar dari komputer ke lembar kertas adalah ______.',
+      sample: 'printer', tip: 'Tulis nama alatnya (contoh: printer).'
+    },
+    {
+      id: 55, type: 'fill', topic: 'Kesehatan Berkomputer', icon: '🪑',
+      q: 'Ketika duduk di depan komputer, posisi badan kita sebaiknya duduk dengan ______.',
+      sample: 'tegak', tip: 'Tulis satu kata (contoh: tegak).'
+    },
+    {
+      id: 56, type: 'fill', topic: 'Teknologi di Sekitar', icon: '🏠',
+      q: 'Sebutkan 2 contoh benda teknologi yang ada di dalam rumahmu!',
+      sample: 'televisi dan kulkas', tip: 'Boleh menyebutkan televisi, kipas angin, mesin cuci, atau laptop.'
+    },
+    {
+      id: 57, type: 'fill', topic: 'Pola & Logika', icon: '🎨',
+      q: 'Lengkapilah pola warna berulang berikut: Merah – Kuning – Merah – Kuning – ______.',
+      sample: 'merah', tip: 'Tulis warna selanjutnya sesuai urutan berulang.'
     }
   ];
 
@@ -1687,7 +1847,18 @@
       const shuffled = [...mcList].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, 10);
     } else if (mode === 'komputer') {
-      return ALL_QUESTIONS.filter(q => q.topic.includes('Komputer'));
+      return ALL_QUESTIONS.filter(q => 
+        q.topic.includes('Komputer') || q.topic.includes('Keyboard') || 
+        q.topic.includes('Mouse') || q.topic.includes('Perangkat') || 
+        q.topic.includes('Program')
+      );
+    } else if (mode === 'pola') {
+      return ALL_QUESTIONS.filter(q => 
+        q.topic.includes('Berpikir') || q.topic.includes('Logika') || 
+        q.topic.includes('Pola') || q.topic.includes('Memilah')
+      );
+    } else if (mode === 'semua') {
+      return ALL_QUESTIONS;
     }
     return ALL_QUESTIONS.slice(0, 30);
   }
